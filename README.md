@@ -10,6 +10,8 @@
   </a>
 </div>
 
+**work in progress**
+
 calculate some sensible break-points between two numbers
 
 `npm i somehow-ticks`
