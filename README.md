@@ -1,7 +1,7 @@
 <div align="center">
   <div>somehow-ticks</div>
   <img src="https://cloud.githubusercontent.com/assets/399657/23590290/ede73772-01aa-11e7-8915-181ef21027bc.png" />
-  <!-- <div><a href="https://spencermounta.in/somehow-ticks/">demo</a></div> -->
+  <div><a href="https://spencermounta.in/somehow-ticks/">demo</a></div>
   <a href="https://npmjs.org/package/somehow-ticks">
     <img src="https://img.shields.io/npm/v/somehow-ticks.svg?style=flat-square" />
   </a>
@@ -38,6 +38,7 @@ This library has some opinions:
 it was built for labelling an x-axis in a space-limited way, but you can use it for whatever weird stuff.
 
 ## See also:
-* [spacetime-ticks](https://github.com/spencermountain/spacetime-ticks) - same api for dates
+* [somehow](https://github.com/spencermountain/somehow) - sneaky infographics library
+* [spacetime-ticks](https://github.com/spencermountain/spacetime-ticks) - same api, but for dates
 
 MIT
