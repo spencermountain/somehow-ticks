@@ -1,0 +1,38 @@
+{
+  "name": "somehow-ticks",
+  "version": "0.0.3",
+  "description": "calculate the best breakpoints between two numbers",
+  "main": "builds/somehow-ticks.js",
+  "unpkg": "builds/somehow-ticks.min.js",
+  "author": "Spencer Kelly (spencermountain)",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npm run start",
+    "start": "budo index.js:assets/bundle.js --live",
+    "build:demo": "browserify index.js -t [ babelify --presets [ @babel/preset-env ] ] | derequire > ./assets/bundle.js",
+    "build": "node ./scripts/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencermountain/frown.git"
+  },
+  "bugs": {
+    "url": "https://github.com/spencermountain/frown/issues"
+  },
+  "homepage": "https://github.com/spencermountain/frown#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.3.3",
+    "@babel/preset-env": "7.3.1",
+    "babelify": "10.0.0",
+    "budo": "11.6.0",
+    "derequire": "2.0.6",
+    "htm": "2.0.0",
+    "shelljs": "0.8.3",
+    "somehow": "0.0.15",
+    "somehow-input": "0.0.7",
+    "terser": "3.16.1",
+    "vhtml": "2.1.0"
+  }
+}
