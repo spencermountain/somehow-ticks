@@ -17,28 +17,29 @@ calculate some sensible break-points between two numbers
 `npm i somehow-ticks`
 
 ```js
-const somehowTicks=require('somehow-ticks')
+const somehowTicks = require('somehow-ticks')
 
-let ticks=somehowTicks(0, 200, 5)
-// [
-// { label: "0", value: 0 }
-// { label: "50", value: 50 }
-// { label: "100", value: 100 }
-// { label: "150", value: 150 }
-// { label: "200", value: 200 }
-// ]
+let ticks = somehowTicks(0, 5000, 5)
+/*
+[ { label: '1k', number: 1000, value: 0.2 },
+  { label: '2k', number: 2000, value: 0.4 },
+  { label: '3k', number: 3000, value: 0.6 },
+  { label: '4k', number: 4000, value: 0.8 } ]
+*/
 ```
 
 This library has some opinions:
-* ticks should always be `spaced evenly`, even if this means less ticks
-* a tick should appear **x.0** or **x.5**
-* they don't need to begin or end at the start and end.
-* *less ticks* are better than too-many ticks
+
+- ticks should always be `spaced evenly`, even if this means less ticks
+- a tick should appear **x.0** or **x.5**
+- they don't need to begin or end at the start and end.
+- _less ticks_ are better than too-many ticks
 
 it was built for labelling an x-axis in a space-limited way, but you can use it for whatever weird stuff.
 
 ## See also:
-* [somehow](https://github.com/spencermountain/somehow) - sneaky infographics library
-* [spacetime-ticks](https://github.com/spencermountain/spacetime-ticks) - same api, but for dates
+
+- [somehow](https://github.com/spencermountain/somehow) - sneaky infographics library
+- [spacetime-ticks](https://github.com/spencermountain/spacetime-ticks) - same api, but for dates
 
 MIT
