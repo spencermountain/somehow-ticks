@@ -1,6 +1,6 @@
 {
   "name": "somehow-ticks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "calculate the best breakpoints between two numbers",
   "main": "builds/somehow-ticks.js",
   "unpkg": "builds/somehow-ticks.min.js",
