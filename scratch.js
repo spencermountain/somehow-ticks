@@ -1,4 +1,6 @@
 const somehowTicks = require('./src')
 
-let ticks = somehowTicks(0, 5000)
+const m = 1000000
+
+let ticks = somehowTicks(0.5, 0.9)
 console.log(ticks)

@@ -1,7 +1,10 @@
 const methods = require('./methods')
 
 const chooseMethod = function(start, end, n = 6) {
-  let diff = end - start
+  let diff = Math.abs(end - start)
+  if (diff === 0) {
+    return []
+  }
   //1 million
   if (diff > 3000000) {
     return methods.millions(start, end, n)
@@ -31,10 +34,7 @@ const chooseMethod = function(start, end, n = 6) {
     return methods.tenths(start, end, n)
   }
   //.01
-  if (diff > 0.3) {
-    return methods.hundredths(start, end, n)
-  }
-  return []
+  return methods.hundredths(start, end, n)
 }
 
 //flip it around backwards

@@ -1,25 +1,26 @@
-const bil = 1000000000
-const mil = 1000000
-const tenThou = 10000
-const thou = 1000
+const n = require('./_constants')
 
 const prettyNum = function(num) {
   num = parseFloat(num)
-  if (num >= bil) {
+  if (num >= n.trillion) {
+    num = parseInt(num / 100000000000, 10) * 100000000000
+    return num / n.trillion + 't'
+  }
+  if (num >= n.billion) {
     num = parseInt(num / 100000000, 10) * 100000000
-    return num / mil + 'b'
+    return num / n.billion + 'b'
   }
-  if (num >= mil) {
+  if (num >= n.million) {
     num = parseInt(num / 100000, 10) * 100000
-    return num / mil + 'm'
+    return num / n.million + 'm'
   }
-  if (num >= tenThou) {
-    num = parseInt(num / thou, 10) * thou
-    return num / thou + 'k'
+  if (num >= n.tenThousand) {
+    num = parseInt(num / n.thousand, 10) * n.thousand
+    return num / n.thousand + 'k'
   }
-  if (num >= thou) {
-    num = parseInt(num / 100, 10) * 100
-    return num / thou + 'k'
+  if (num >= n.thousand) {
+    num = parseInt(num / n.hundred, 10) * n.hundred
+    return num / n.thousand + 'k'
   }
   return num.toLocaleString()
 }
